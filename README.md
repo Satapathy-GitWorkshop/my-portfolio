@@ -1,12 +1,80 @@
-# React + Vite
+# 🧑‍💻 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive portfolio website built with **React** and **Vite** that showcases your projects, experience, and contact details. It supports **dark/light mode**, **flip animations**, and is easy to customize.
 
-Currently, two official plugins are available:
+## 🔗 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🌐 Live Preview]:
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 Light/Dark Theme Toggle
+- 🧩 Modular React Components
+- 📱 Fully Responsive Design
+- 🎬 Flip Card Animation for Projects
+- 📄 Resume Link, Contact CTA
+- 🌐 Social Media Links
+- ⚙️ Vite for fast dev & build
+
+## 🏗️ Tech Stack
+
+- **React**
+- **Vite**
+- **CSS Modules**
+- **Font Awesome**
+- **HTML5 & CSS3**
+
+## 📁 Folder Structure
+
+```
+my-portfolio/
+├── public/
+│   └── assets/
+│       └── project/        # Project images
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Header.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Experience.jsx
+│   │   └── Footer.jsx
+│   ├── styles/
+│   │   ├── style.css
+│   │   └── utilities.css
+│   ├── App.jsx
+│   └── main.jsx
+```
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/portfolio-react.git
+cd portfolio-react
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Locally
+
+```bash
+npm run dev
+```
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 🙏 Credits
+
+Built with 💙 using [React](https://reactjs.org/) and [Vite](https://vitejs.dev/).
+
+## 📄 License
