@@ -364,49 +364,7 @@ body {
 .contact-form button {
   align-self: flex-start;
 }
-/*Experiance CSS
-.experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 4rem 0;
-}
 
-.experience-card {
-  background: var(--card-background);
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  color: var(--text-color);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.experience-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.experience-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: contain;
-  background-color: white;
-  padding: 4px;
-}
-
-.experience-description {
-  margin-bottom: 0.75rem;
-}
-
-.experience-skills {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-  */
-/* Experience Section */
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -462,7 +420,7 @@ body {
   color: var(--text-color);
 }
 /*Project flip CSS*/
-.flip-card {
+/* .flip-card {
   perspective: 1000px;
   height: 250px;
 }
@@ -497,4 +455,81 @@ body {
 
 .flip-card-back {
   transform: rotateY(180deg);
+} */
+
+/* Container for the grid */
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.flip-card {
+  perspective: 1000px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px; /* Smoother corners */
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Front Styling */
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Puts text at the bottom */
+}
+
+/* Text visibility overlay for the front */
+.project-info-overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+/* Back Styling */
+.flip-card-back {
+  background: #222; /* Or your variable --card-background */
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.description-text {
+  margin: 15px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.stack-text {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
 }

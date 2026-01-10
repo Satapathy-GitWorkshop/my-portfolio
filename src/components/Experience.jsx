@@ -4,43 +4,27 @@ import React, { useState } from 'react'
 const experienceList = [
   {
     title: 'DevOps & Fullstack Engineering Intern',
-    company: 'Flipr Innovations Pvt. Ltd.',
+    company: 'Infosys.',
     duration: 'Aug 2023 – July 2023',
     description: 'Working on Flipr Platforms, managing DevOps, and streamlining the process with automation.',
     skills: ['Docker', 'Terraform', 'AWS', 'EC2', 'Portainer', 'Nginx', 'JavaScript', 'TypeScript', 'Node Js', 'Next Js'],
     logo: '/assets/flipr.png'
   },
   {
-    title: 'Frontend Engineer Intern',
-    company: 'Neurobit',
+    title: 'Fullstack Java devloper',
+    company: 'Virtula Employee pvt ltd.',
     duration: 'June 2023 – Present',
     description: 'Working on the frontend of the web application using ReactJS, Redux, and Material UI.',
     skills: ['ReactJS', 'Redux', 'NodeJs', 'Material UI', 'HTML', 'CSS', 'JavaScript'],
     logo: '/assets/neurobit.png'
   },
   {
-    title: 'Fullstack Externship',
-    company: 'Flipr',
+    title: 'Java Developer',
+    company: 'TechnoLabs Software pvt ltd.',
     duration: 'June 2023 – July 2023',
     description: 'Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.',
     skills: ['ReactJS', 'Redux', 'NodeJs', 'Material UI', 'HTML', 'CSS', 'JavaScript', 'Docker', 'AWS', 'MongoDB'],
     logo: '/assets/flipr.png'
-  },
-  {
-    title: 'Open Source Contributor',
-    company: 'GirlScript Summer of Code',
-    duration: 'May 2023 – Present',
-    description: 'Contributing to different open-source projects and learn from industry experts',
-    skills: [],
-    logo: '/assets/gsoc.png'
-  },
-  {
-    title: 'Android Developer',
-    company: 'DSC KIIT',
-    duration: 'Nov 2021 – Present',
-    description: 'As an Android developer at the Google Developers Student Club (GDCS)...',
-    skills: ['Leadership', 'Mobile Application Development', 'Kotlin', 'XML', 'Figma'],
-    logo: '/assets/dsc.png'
   }
 ]
 
