@@ -1,6 +1,8 @@
-// src/components/Experience.jsx
+
 import React, { useState } from 'react'
 
+import infosysLogo from '../assets/Experience/Infosys.png';
+import  teckvalley from '../assets/Experience/teckvalley.jpg';
 const experienceList = [
   {
     title: 'DevOps & Fullstack Engineering Intern',
@@ -8,7 +10,7 @@ const experienceList = [
     duration: 'Aug 2023 – July 2023',
     description: 'Working on Flipr Platforms, managing DevOps, and streamlining the process with automation.',
     skills: ['Docker', 'Terraform', 'AWS', 'EC2', 'Portainer', 'Nginx', 'JavaScript', 'TypeScript', 'Node Js', 'Next Js'],
-    logo: '/assets/flipr.png'
+    logo: infosysLogo
   },
   {
     title: 'Fullstack Java devloper',
@@ -16,7 +18,7 @@ const experienceList = [
     duration: 'June 2023 – Present',
     description: 'Working on the frontend of the web application using ReactJS, Redux, and Material UI.',
     skills: ['ReactJS', 'Redux', 'NodeJs', 'Material UI', 'HTML', 'CSS', 'JavaScript'],
-    logo: '/assets/neurobit.png'
+    logo: teckvalley
   },
   {
     title: 'Java Developer',
