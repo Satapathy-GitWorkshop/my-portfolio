@@ -1,0 +1,79 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.p {
+  color: var(--muted); font-size: 0.87rem;
+  line-height: 1.9; margin-bottom: 0.9rem;
+}
+
+/* Facts */
+.facts {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1rem; margin-top: 2.5rem;
+}
+.fact {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.2rem;
+  text-align: center; transition: transform 0.2s, border-color 0.2s;
+}
+.fact:hover { transform: translateY(-3px); border-color: rgba(108,99,255,0.35); }
+.factNum {
+  font-family: 'Syne',sans-serif; font-size: 2.2rem;
+  font-weight: 800; color: var(--accent2); line-height: 1;
+}
+:global([data-theme='light']) .factNum { color: var(--accent); }
+.factLabel {
+  font-size: 0.63rem; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem;
+}
+
+/* Card */
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 2.5rem;
+  position: relative; overflow: hidden;
+}
+.card::after {
+  content:''; position: absolute; top: -100px; right: -100px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle,rgba(108,99,255,0.12),transparent 70%);
+  border-radius: 50%; animation: rotateSlow 12s linear infinite; pointer-events: none;
+}
+:global([data-theme='light']) .card::after { background: radial-gradient(circle,rgba(79,70,229,0.08),transparent 70%); }
+@keyframes rotateSlow { from{transform:rotate(0);} to{transform:rotate(360deg);} }
+
+.quote {
+  font-family: 'Instrument Serif',serif; font-style: italic;
+  font-size: 1rem; color: var(--text); line-height: 1.65;
+  margin-bottom: 1.6rem; padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--border); position: relative; z-index: 1;
+}
+.rows { list-style: none; position: relative; z-index: 1; }
+.rows li {
+  display: flex; justify-content: space-between;
+  padding: 0.62rem 0; border-bottom: 1px solid var(--border);
+  font-size: 0.78rem; gap: 1rem;
+}
+.rows li:last-child { border: none; }
+.rowKey { color: var(--muted); flex-shrink: 0; }
+:global([data-theme='light']) .rowKey { color: #9090b0; }
+.rowVal { color: var(--text); text-align: right; word-break: break-word; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid { gap: 3rem; }
+}
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .card { padding: 1.8rem; }
+  .rows li { font-size: 0.72rem; }
+}
+@media (max-width: 480px) {
+  .facts { grid-template-columns: repeat(3,1fr); gap: 0.6rem; }
+  .fact  { padding: 0.9rem 0.5rem; }
+  .factNum { font-size: 1.8rem; }
+}

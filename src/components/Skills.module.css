@@ -1,0 +1,41 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem; margin-top: 2.5rem;
+}
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.8rem;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.card:hover { transform: translateY(-5px); border-color: rgba(108,99,255,0.4); }
+
+.catTitle {
+  font-family: 'Syne',sans-serif; font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent2); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+:global([data-theme='light']) .catTitle { color: var(--accent); }
+
+.badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.badge {
+  background: rgba(108,99,255,0.07); border: 1px solid rgba(108,99,255,0.13);
+  color: var(--text); padding: 0.27rem 0.62rem;
+  border-radius: 3px; font-size: 0.67rem;
+  transition: all 0.2s; cursor: default;
+}
+.badge:hover { background: rgba(108,99,255,0.18); border-color: var(--accent); color: var(--accent2); }
+:global([data-theme='light']) .badge       { background: rgba(79,70,229,0.06); border-color: rgba(79,70,229,0.15); color: #111128; }
+:global([data-theme='light']) .badge:hover { background: rgba(79,70,229,0.14); border-color: var(--accent); color: #3730a3; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .card { padding: 1.4rem; }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}

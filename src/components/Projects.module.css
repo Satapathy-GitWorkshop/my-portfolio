@@ -1,0 +1,10 @@
+.hint { color: var(--muted); font-size: 0.78rem; margin-bottom: 2rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.4rem; margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .hint { display: none; }
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+}
